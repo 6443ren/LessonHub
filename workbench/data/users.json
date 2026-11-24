@@ -1,0 +1,23 @@
+[
+  {
+    "id": "teacher01",
+    "name": "张老师",
+    "password": "teacher01",
+    "role": "teacher",
+    "note": "关联所有现有历史/组卷/资料库"
+  },
+  {
+    "id": "teacher02",
+    "name": "李老师",
+    "password": "teacher02",
+    "role": "teacher",
+    "note": "全新空白账号"
+  },
+  {
+    "id": "teacher03",
+    "name": "王老师",
+    "password": "teacher03",
+    "role": "teacher",
+    "note": "全新空白账号"
+  }
+]

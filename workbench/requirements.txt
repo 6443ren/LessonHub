@@ -1,0 +1,10 @@
+flask>=2.3
+requests>=2.31
+# 解析内置知识库 / 上传资料的文本（PDF 与 docx）
+pymupdf>=1.23
+python-docx>=1.1
+# 可选：对扫描版 PDF 做 OCR（需系统安装 tesseract 可执行程序；不装则扫描件仅记录不索引）
+# pillow>=10
+# pytesseract>=0.3
+# 可选：本地中文 OCR 引擎（无需 tesseract）
+# rapidocr-onnxruntime>=1.3
