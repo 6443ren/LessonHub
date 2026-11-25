@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: zhibei-workbench
+    runtime: python
+    plan: free
+    region: singapore
+    rootDir: workbench
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn server:app --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 300
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: HOST
+        value: 0.0.0.0
+      - key: LIBRARY_SHARED
+        value: "1"
+      - key: SECRET_KEY
+        generateValue: true
+      # 以下为密钥，创建时在 Render 后台手动填写
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_BASE_URL
+        sync: false
+      - key: LLM_MODEL
+        sync: false
+      - key: AGENT_URL
+        sync: false
+      - key: AGENT_TOKEN
+        sync: false
+      - key: AGENT_PROJECT_ID
+        sync: false
